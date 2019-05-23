@@ -170,7 +170,6 @@ int main() {
                                 ST_CMPS *stu = CSclass.findNum(num);
                                 if (stu) {
                                     stu->print();
-                                    delete stu;
                                 } else {
                                     cout << num << " doesn't exist." << endl;
                                 }
@@ -199,7 +198,6 @@ int main() {
                                 ST_PE *stu = PEclass.findNum(num);
                                 if (stu) {
                                     stu->print();
-                                    delete stu;
                                 } else {
                                     cout << num << " doesn't exist." << endl;
                                 }
@@ -216,7 +214,7 @@ int main() {
                         cout << "Index error" << endl;
                         break;
                 }
-
+                break;
             }
 
             case 3: {

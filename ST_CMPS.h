@@ -65,7 +65,7 @@ ST_CMPS *ST_CMPS::getNext() {
 }
 
 void ST_CMPS::print() {
-    cout << "Number: " << setw(3) << number << " Name: " << setw(10) << name;
+    cout << "Number: " << setw(3) << number << " Name: " << left << setw(10) << name;
     cout << " CS score: " << setw(3) << prgScr << " math score: " << setw(3) << mathScr << " total score: " << setw(3)
          << prgScr + mathScr
          << endl;

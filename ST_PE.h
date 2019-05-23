@@ -65,7 +65,7 @@ ST_PE *ST_PE::getNext() {
 }
 
 void ST_PE::print() {
-    cout << "Number: " << setw(3) << number << " Name: " << setw(10) << name;
+    cout << "Number: " << setw(3) << number << " Name: " << left << setw(10) << name;
     cout << "PE score: " << pe << "total: " << setw(3) << pe << endl;
 }
 
