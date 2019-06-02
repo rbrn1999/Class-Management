@@ -33,6 +33,10 @@ public:
     ST_PE *getNext();
 
     void print();
+
+    void printScore();
+
+    string data();
 };
 
 ST_PE::ST_PE() {
@@ -65,8 +69,29 @@ ST_PE *ST_PE::getNext() {
 }
 
 void ST_PE::print() {
-    cout << "Number: " << setw(3) << number << " Name: " << left << setw(10) << name;
-    cout << "PE score: " << pe << "total: " << setw(3) << pe << endl;
+    cout << "Number: " << setw(3) << number << " Name: " << left << setw(10) << name << right;
+    cout << "PE score: " << setw(4) << pe << "total: " << setw(4) << pe << endl;
+}
+
+void ST_PE::printScore() {
+    cout << setw(3) << number << "      " << left << setw(10) << name << right;
+    cout << setw(4) << pe << setw(4) << pe << endl;
+}
+
+string ST_PE::data() {
+    string num, pe;
+    stringstream ss;
+    ss << this->number;
+    num = ss.str();
+    ss.str("");
+    ss.clear();
+    ss << this->pe;
+    pe = ss.str();
+    ss.str("");
+    ss.clear();
+
+
+    return num+"\n"+name+"\n"+pe;
 }
 
 

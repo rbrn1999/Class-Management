@@ -33,6 +33,8 @@ public:
 
     void print();
 
+    void printScore();
+
     string data();
 
 };
@@ -65,8 +67,15 @@ ST_CMPS *ST_CMPS::getNext() {
 }
 
 void ST_CMPS::print() {
-    cout << "Number: " << setw(3) << number << " Name: " << left << setw(10) << name;
+    cout << "Number: " << setw(3) << number << " Name: " << left << setw(10) << name << right;
     cout << " CS score: " << setw(3) << prgScr << " math score: " << setw(3) << mathScr << " total score: " << setw(3)
+         << prgScr + mathScr
+         << endl;
+}
+
+void ST_CMPS::printScore() {
+    cout << setw(3) << number << "      " << left << setw(10) << name << right;
+    cout << setw(4) << prgScr << setw(4) << mathScr << setw(5)
          << prgScr + mathScr
          << endl;
 }
@@ -85,7 +94,7 @@ string ST_CMPS::data() {
     ss << this->mathScr;
     math = ss.str();
 
-    return num+" "+name+" "+prg+" "+math;
+    return num+"\n"+name+"\n"+prg+" "+math;
 }
 
 

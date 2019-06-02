@@ -41,6 +41,12 @@ public:
     void ranking();
 
     void saveCS();
+
+    void loadCS();
+
+    void savePE();
+
+    void loadPE();
 };
 
 template<typename T>
@@ -160,8 +166,15 @@ void CL<T>::ranking() {
         }
     }
     //output results
+    int place = 1;
     for (int i = 0; i < getCount(); i++) {
-        students[i].print();
+        if (i) {
+            if (!(students[i].getTotal() == students[i-1].getTotal())) {
+                place = i + 1;
+            }
+        }
+        cout << left << setw(3) <<  place << "  ";
+        students[i].printScore();
     }
 }
 
@@ -171,11 +184,69 @@ void CL<T>::saveCS() {
     file.open("CSclass.txt", fstream::trunc);
     file.open("CSclass.txt",fstream::out);
     T *curStu = head;
-    for (int i=0; i< getCount(); i++) {
+    while (curStu) {
         file << curStu->data() << "\n";
         curStu = curStu->getNext();
     }
     file.close();
+}
+
+template <typename T>
+void CL<T>::loadCS() {
+    ifstream file;
+    file.open("CSclass.txt");
+    if (file.is_open()) {
+        while(file.peek()!=EOF) {
+            T *stu = new T;
+            int num, prg, math;
+            string name;
+            file >> num;
+            file.ignore(INT_MAX, '\n');
+            getline(file, name);
+            file >> prg;
+            file >> math;
+            stu->init(num, name, prg, math);
+            this->insert(stu);
+            file.get();
+        }
+        file.close();
+    }
+
+}
+
+template <typename T>
+void CL<T>::savePE() {
+    fstream file;
+    file.open("PEclass.txt", fstream::trunc);
+    file.open("PEclass.txt",fstream::out);
+    T *curStu = head;
+    while (curStu) {
+        file << curStu->data() << "\n";
+        curStu = curStu->getNext();
+    }
+    file.close();
+}
+
+template <typename T>
+void CL<T>::loadPE() {
+    ifstream file;
+    file.open("PEclass.txt");
+    if (file.is_open()) {
+        while(file.peek()!=EOF) {
+            T *stu = new T;
+            int num, pe;
+            string name;
+            file >> num;
+            file.ignore(INT_MAX, '\n');
+            getline(file, name);
+            file >> pe;
+            stu->init(num, name, pe);
+            this->insert(stu);
+            file.get();
+        }
+        file.close();
+    }
+
 }
 
 #endif //CLASS_MANAGEMENT_CL_H

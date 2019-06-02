@@ -78,8 +78,12 @@ int classOption() {
 int main() {
     CL<ST_PE> PEclass = CL<ST_PE>();
     CL<ST_CMPS> CSclass = CL<ST_CMPS>();
+    PEclass.loadPE();
+    CSclass.loadCS();
+
     bool leave = false;
     while (!leave) {
+        PEclass.savePE();
         CSclass.saveCS();
         switch (MENU()) {
             case 1: {
@@ -215,6 +219,7 @@ int main() {
                         break;
                 }
                 break;
+
             }
 
             case 3: {
@@ -242,9 +247,11 @@ int main() {
             case 4: {
                 switch (classOption()) {
                     case 1:
+                        cout << "#   Number    Name        CS MATH TOTAL" << endl;
                         CSclass.ranking();
                         break;
                     case 2:
+                        cout << "#   Number    Name        PE TOTAL" << endl;
                         PEclass.ranking();
                         break;
                     default:
