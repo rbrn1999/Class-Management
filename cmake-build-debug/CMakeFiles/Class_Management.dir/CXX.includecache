@@ -1,0 +1,94 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/sparkz2o/Dev/c++/Class Management/CL.h
+iostream
+-
+string
+-
+iomanip
+-
+fstream
+-
+limits
+-
+sstream
+-
+ST.h
+/Users/sparkz2o/Dev/c++/Class Management/ST.h
+ST_CMPS.h
+/Users/sparkz2o/Dev/c++/Class Management/ST_CMPS.h
+
+/Users/sparkz2o/Dev/c++/Class Management/ST.h
+iostream
+-
+string
+-
+iomanip
+-
+fstream
+-
+limits
+-
+sstream
+-
+
+/Users/sparkz2o/Dev/c++/Class Management/ST_CMPS.h
+iostream
+-
+string
+-
+iomanip
+-
+fstream
+-
+limits
+-
+sstream
+-
+ST.h
+/Users/sparkz2o/Dev/c++/Class Management/ST.h
+
+/Users/sparkz2o/Dev/c++/Class Management/ST_PE.h
+iostream
+-
+string
+-
+iomanip
+-
+fstream
+-
+limits
+-
+sstream
+-
+ST.h
+/Users/sparkz2o/Dev/c++/Class Management/ST.h
+
+/Users/sparkz2o/Dev/c++/Class Management/main.cpp
+iostream
+-
+string
+-
+iomanip
+-
+fstream
+-
+limits
+-
+sstream
+-
+ST.h
+/Users/sparkz2o/Dev/c++/Class Management/ST.h
+ST_CMPS.h
+/Users/sparkz2o/Dev/c++/Class Management/ST_CMPS.h
+ST_PE.h
+/Users/sparkz2o/Dev/c++/Class Management/ST_PE.h
+CL.h
+/Users/sparkz2o/Dev/c++/Class Management/CL.h
+
