@@ -1,3 +1,0 @@
-/Users/sparkz2o/Dev/c++/Class Management/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/sparkz2o/Dev/c++/Class Management/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/sparkz2o/Dev/c++/Class Management/cmake-build-debug/CMakeFiles/Class_Management.dir
